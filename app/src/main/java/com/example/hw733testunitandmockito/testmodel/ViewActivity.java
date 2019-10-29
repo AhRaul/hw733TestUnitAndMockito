@@ -1,4 +1,4 @@
-package com.example.hw733testunitandmockito;
+package com.example.hw733testunitandmockito.testmodel;
 
 import moxy.MvpAppCompatActivity;
 import moxy.presenter.InjectPresenter;
@@ -6,6 +6,8 @@ import moxy.presenter.InjectPresenter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.hw733testunitandmockito.R;
 
 public class ViewActivity extends MvpAppCompatActivity implements IView {
 

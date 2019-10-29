@@ -1,4 +1,4 @@
-package com.example.hw733testunitandmockito;
+package com.example.hw733testunitandmockito.testmodel;
 
 import moxy.MvpView;
 import moxy.viewstate.strategy.AddToEndStrategy;

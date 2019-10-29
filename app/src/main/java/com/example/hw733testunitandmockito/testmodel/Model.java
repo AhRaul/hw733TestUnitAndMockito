@@ -1,4 +1,4 @@
-package com.example.hw733testunitandmockito;
+package com.example.hw733testunitandmockito.testmodel;
 
 public class Model {
 

@@ -1,6 +1,6 @@
 package com.example.hw733testunitandmockito.model;
 
-import com.example.hw733testunitandmockito.Model;
+import com.example.hw733testunitandmockito.testmodel.Model;
 
 import org.junit.Assert;
 import org.junit.Before;
