@@ -5,10 +5,13 @@ import android.util.Log;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
+import moxy.InjectViewState;
+import moxy.MvpPresenter;
 
-public class RetrofitPresenter {
+@InjectViewState
+public class RetrofitPresenter extends MvpPresenter<IRetrofitView> {
 
-    private static final String TAG = "RetrofitDifPresenter";
+    private static final String TAG = "RetrofitPresenter";
 
     private RetrofitApi retrofitApi;
 
@@ -21,6 +24,7 @@ public class RetrofitPresenter {
 
         Disposable disposable = single.observeOn(AndroidSchedulers.mainThread()).subscribe(user -> {
             Log.d(TAG, "onNext: " + user.login);
+            getViewState().showName(user.login);
         }, throwable -> {
             Log.e(TAG, "onError");
         });

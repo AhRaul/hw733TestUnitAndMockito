@@ -25,7 +25,7 @@ public class ViewActivity extends MvpAppCompatActivity implements IView {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.noButtonClick();
+                presenter.onButtonClick();
             }
         });
     }

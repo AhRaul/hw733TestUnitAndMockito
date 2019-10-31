@@ -13,7 +13,7 @@ public class MyPresenter extends MvpPresenter<IView> {
         this.model = new Model();
     }
 
-    public void noButtonClick() {
+    public void onButtonClick() {
         getViewState().setButtonText(model.summ(3, 2));
     }
 }
