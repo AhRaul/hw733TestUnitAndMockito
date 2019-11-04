@@ -2,6 +2,8 @@ package com.example.hw733testunitandmockito.testapipresenter;
 
 import android.util.Log;
 
+import javax.inject.Inject;
+
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -13,11 +15,8 @@ public class RetrofitPresenter extends MvpPresenter<IRetrofitView> {
 
     private static final String TAG = "RetrofitPresenter";
 
-    private RetrofitApi retrofitApi;
-
-    public RetrofitPresenter() {
-        retrofitApi = new RetrofitApi();
-    }
+    @Inject
+    RetrofitApi retrofitApi;
 
     public void getString() {
         Observable<User> single = retrofitApi.requestServer();
